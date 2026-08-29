@@ -8,10 +8,6 @@
 atlas = ExtResource("1_njkqv")
 region = Rect2(64, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l48yu"]
-atlas = ExtResource("1_njkqv")
-region = Rect2(64, 16, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_a2ham"]
 atlas = ExtResource("1_njkqv")
 region = Rect2(0, 16, 16, 16)
@@ -135,14 +131,6 @@ offset_top = 176.0
 offset_right = 59.0
 offset_bottom = 216.0
 texture = SubResource("AtlasTexture_vop4n")
-
-[node name="TextureRect2" type="TextureRect" parent="Control/Textures" unique_id=1421196106]
-layout_mode = 0
-offset_left = 299.0
-offset_top = 10.0
-offset_right = 339.0
-offset_bottom = 50.0
-texture = SubResource("AtlasTexture_l48yu")
 
 [node name="TextureRect3" type="TextureRect" parent="Control/Textures" unique_id=367938425]
 layout_mode = 0
