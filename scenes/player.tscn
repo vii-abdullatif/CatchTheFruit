@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dqdgmblrd2nca"]
+
+[ext_resource type="Script" uid="uid://w20jx1n5hjer" path="res://scenes/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://uie727cgacni" path="res://assets/basket.png" id="2_qhqgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2brh"]
+size = Vector2(32, 12)
+
+[node name="Player" type="CharacterBody2D" unique_id=2115400878]
+script = ExtResource("1_g2els")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=739036889]
+polygon = PackedVector2Array(-16, -6, -15, -6, -15, -7, -12, -7, -12, -2, 12, -2, 12, -7, 15, -7, 15, -6, 16, -6, 16, 1, 14, 1, 14, 7, 13, 7, 13, 8, 12, 8, 12, 11, 11, 11, 11, 12, 10, 12, 10, 13, -10, 13, -10, 12, -11, 12, -11, 11, -12, 11, -12, 8, -13, 8, -13, 7, -14, 7, -14, 1, -16, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=89181636]
+texture = ExtResource("2_qhqgy")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1020613615]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=849255534]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_g2brh")

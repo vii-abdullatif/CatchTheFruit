@@ -1,0 +1,53 @@
+[gd_scene format=4 uid="uid://cvc1mc54sn2im"]
+
+[ext_resource type="Texture2D" uid="uid://b1kvayb8qu5k4" path="res://assets/Tileset_Interior Wood_Gnomenlied.png" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dqdgmblrd2nca" path="res://scenes/player.tscn" id="2_0wfyh"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wfyh"]
+texture = ExtResource("1_o5qli")
+1:7/size_in_atlas = Vector2i(4, 4)
+1:7/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sugp2"]
+sources/0 = SubResource("TileSetAtlasSource_0wfyh")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5qli"]
+size = Vector2(362, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(20, 482)
+
+[node name="Main" type="Node2D" unique_id=1103053908]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1645212050]
+tile_map_data = PackedByteArray("AAABAAEAAAABAAcAAAAFAAEAAAABAAcAAAAJAAEAAAABAAcAAAANAAEAAAABAAcAAAARAAEAAAABAAcAAAAVAAEAAAABAAcAAAAVAAUAAAABAAcAAAARAAUAAAABAAcAAAANAAUAAAABAAcAAAAJAAUAAAABAAcAAAAFAAUAAAABAAcAAAABAAUAAAABAAcAAAABAAkAAAABAAcAAAAFAAkAAAABAAcAAAABAA0AAAABAAcAAAABABEAAAABAAcAAAABABUAAAABAAcAAAABABkAAAABAAcAAAABAB0AAAABAAcAAAAFAB0AAAABAAcAAAAJAB0AAAABAAcAAAANAB0AAAABAAcAAAARAB0AAAABAAcAAAAVAB0AAAABAAcAAAAVABkAAAABAAcAAAARABkAAAABAAcAAAANABkAAAABAAcAAAAJABkAAAABAAcAAAAFABkAAAABAAcAAAAFABUAAAABAAcAAAAJABUAAAABAAcAAAANABUAAAABAAcAAAARABUAAAABAAcAAAAVABUAAAABAAcAAAAVABEAAAABAAcAAAARABEAAAABAAcAAAANABEAAAABAAcAAAAJABEAAAABAAcAAAAFABEAAAABAAcAAAAFAA0AAAABAAcAAAAJAA0AAAABAAcAAAANAA0AAAABAAcAAAARAA0AAAABAAcAAAAVAA0AAAABAAcAAAAJAAkAAAABAAcAAAANAAkAAAABAAcAAAARAAkAAAABAAcAAAAVAAkAAAABAAcAAAA=")
+tile_set = SubResource("TileSet_sugp2")
+
+[node name="Borders" type="Node2D" parent="." unique_id=1195383696]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Borders" unique_id=472785906]
+position = Vector2(0, -239)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D" unique_id=2129081676]
+position = Vector2(180, 490)
+shape = SubResource("RectangleShape2D_o5qli")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Borders" unique_id=418146972]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D2" unique_id=1046863857]
+position = Vector2(-10, 239)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Borders" unique_id=1328079968]
+position = Vector2(380, -91)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/StaticBody2D3" unique_id=111272223]
+position = Vector2(-10, 239)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="Fruits" type="Node2D" parent="." unique_id=356895371]
+
+[node name="Bombs" type="Node2D" parent="." unique_id=1788335518]
+
+[node name="Player" parent="." unique_id=2115400878 instance=ExtResource("2_0wfyh")]
+position = Vector2(85, 61)
