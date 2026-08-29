@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dvluu8deosbhx"]
+
+[ext_resource type="Script" uid="uid://0rdx1jooa0o5" path="res://scenes/fruits.gd" id="1_4b3k7"]
+[ext_resource type="Texture2D" uid="uid://baylhcyuy4tei" path="res://assets/FRUITS-tiles.png" id="2_su2pj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_su2pj"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iuj4e"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgkhl"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mue5y"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v7wr"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6urs"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgupl"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uroet"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlcbh"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lpab"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oj1kw"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_12u6l"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6208v"]
+atlas = ExtResource("2_su2pj")
+region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_su2pj"]
+
+[node name="Fruits" type="Area2D" unique_id=169755809 groups=["Fruits"]]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_4b3k7")
+textures = Array[Texture]([SubResource("AtlasTexture_su2pj"), SubResource("AtlasTexture_iuj4e"), SubResource("AtlasTexture_dgkhl"), SubResource("AtlasTexture_mue5y"), SubResource("AtlasTexture_5v7wr"), SubResource("AtlasTexture_c6urs"), SubResource("AtlasTexture_sgupl"), SubResource("AtlasTexture_uroet"), SubResource("AtlasTexture_jlcbh"), SubResource("AtlasTexture_5lpab"), SubResource("AtlasTexture_oj1kw"), SubResource("AtlasTexture_12u6l"), SubResource("AtlasTexture_6208v")])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2040584902]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=371354292]
+shape = SubResource("CircleShape2D_su2pj")

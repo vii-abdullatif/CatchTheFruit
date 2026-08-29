@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bggs1t2uic7y3"]
+
+[ext_resource type="Texture2D" uid="uid://bfrxgew3tolji" path="res://assets/boooooomb.png" id="1_4kkau"]
+[ext_resource type="Script" uid="uid://c2pa88cxmqnal" path="res://scenes/bomb.gd" id="1_vpdcx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vpdcx"]
+
+[node name="Bomb" type="Area2D" unique_id=864970288]
+script = ExtResource("1_vpdcx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1620933222]
+position = Vector2(0, -5)
+texture = ExtResource("1_4kkau")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1113924536]
+shape = SubResource("CircleShape2D_vpdcx")

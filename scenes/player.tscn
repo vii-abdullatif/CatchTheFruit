@@ -15,8 +15,10 @@ polygon = PackedVector2Array(-16, -6, -15, -6, -15, -7, -12, -7, -12, -2, 12, -2
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=89181636]
 texture = ExtResource("2_qhqgy")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1020613615]
+[node name="Area2D" type="Area2D" parent="." unique_id=1020613615 groups=["Player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=849255534]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_g2brh")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
