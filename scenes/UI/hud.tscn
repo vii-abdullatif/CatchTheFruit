@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://btpmpcto5hmg7"]
+
+[ext_resource type="Script" uid="uid://dqcwot651th4h" path="res://scenes/UI/hud.gd" id="1_c4vmg"]
+[ext_resource type="FontFile" uid="uid://d3fc2j8uwd5to" path="res://assets/PressStart2P.ttf" id="2_rd3kb"]
+
+[node name="HUD" type="CanvasLayer" unique_id=463366487]
+script = ExtResource("1_c4vmg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=396028512]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1892135937]
+layout_mode = 2
+
+[node name="Score" type="Label" parent="HBoxContainer/MarginContainer" unique_id=1408811286]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rd3kb")
+text = "Score: 0"
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=1394662481]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+
+[node name="HighScore" type="Label" parent="HBoxContainer/MarginContainer2" unique_id=1571815803]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rd3kb")
+text = "HighScore:"

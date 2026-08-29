@@ -1,0 +1,252 @@
+[gd_scene format=3 uid="uid://bohjxr2elv724"]
+
+[ext_resource type="Texture2D" uid="uid://baylhcyuy4tei" path="res://assets/FRUITS-tiles.png" id="1_njkqv"]
+[ext_resource type="Script" uid="uid://xysdjyhfbsii" path="res://scenes/UI/game_over.gd" id="1_vop4n"]
+[ext_resource type="FontFile" uid="uid://d3fc2j8uwd5to" path="res://assets/PressStart2P.ttf" id="2_l48yu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vop4n"]
+atlas = ExtResource("1_njkqv")
+region = Rect2(64, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l48yu"]
+atlas = ExtResource("1_njkqv")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2ham"]
+atlas = ExtResource("1_njkqv")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yv7mv"]
+atlas = ExtResource("1_njkqv")
+region = Rect2(96, 48, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_r5ffl"]
+load_path = "res://.godot/imported/FRUITS-tiles.png-bdca7a2642971a0ba3f8418485e5521e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrum0"]
+atlas = SubResource("CompressedTexture2D_r5ffl")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uw231"]
+atlas = ExtResource("1_njkqv")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4eny6"]
+atlas = ExtResource("1_njkqv")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1t5eu"]
+atlas = ExtResource("1_njkqv")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kthu3"]
+atlas = ExtResource("1_njkqv")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iw4x2"]
+bg_color = Color(0.41745034, 2.408944e-05, 0.33863276, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.95659906, 0.3314725, 0.83918387, 0.6)
+shadow_size = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vop4n"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njkqv"]
+bg_color = Color(0.9563679, 0.000950101, 0.9861788, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.41568628, 0, 0.3372549, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 20
+
+[node name="Control" type="CanvasLayer" unique_id=1860685169]
+script = ExtResource("1_vop4n")
+
+[node name="Control" type="Control" parent="." unique_id=1467204912]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=121596296]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control" unique_id=834544326]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 10
+
+[node name="Label" type="Label" parent="Control/MarginContainer" unique_id=1913181511]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(1, 0.14467585, 0.5593935, 1)
+theme_override_fonts/font = ExtResource("2_l48yu")
+theme_override_font_sizes/font_size = 24
+text = "GAME OVER!!"
+horizontal_alignment = 1
+
+[node name="Textures" type="Control" parent="Control" unique_id=1817599489]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/Textures" unique_id=757246424]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 176.0
+offset_right = 59.0
+offset_bottom = 216.0
+texture = SubResource("AtlasTexture_vop4n")
+
+[node name="TextureRect2" type="TextureRect" parent="Control/Textures" unique_id=1421196106]
+layout_mode = 0
+offset_left = 299.0
+offset_top = 10.0
+offset_right = 339.0
+offset_bottom = 50.0
+texture = SubResource("AtlasTexture_l48yu")
+
+[node name="TextureRect3" type="TextureRect" parent="Control/Textures" unique_id=367938425]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 169.0
+offset_right = 319.0
+offset_bottom = 209.0
+texture = SubResource("AtlasTexture_a2ham")
+
+[node name="TextureRect4" type="TextureRect" parent="Control/Textures" unique_id=723490090]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 112.0
+offset_right = 347.0
+offset_bottom = 152.0
+texture = SubResource("AtlasTexture_yv7mv")
+
+[node name="TextureRect5" type="TextureRect" parent="Control/Textures" unique_id=824171718]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 76.0
+offset_right = 95.0
+offset_bottom = 116.0
+texture = SubResource("AtlasTexture_lrum0")
+
+[node name="TextureRect9" type="TextureRect" parent="Control/Textures" unique_id=873081870]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 53.0
+offset_right = 201.0
+offset_bottom = 93.0
+texture = SubResource("AtlasTexture_uw231")
+
+[node name="TextureRect6" type="TextureRect" parent="Control/Textures" unique_id=72925102]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 23.0
+offset_right = 70.0
+offset_bottom = 63.0
+texture = SubResource("AtlasTexture_4eny6")
+
+[node name="TextureRect7" type="TextureRect" parent="Control/Textures" unique_id=498864173]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 49.0
+offset_right = 290.0
+offset_bottom = 89.0
+texture = SubResource("AtlasTexture_1t5eu")
+
+[node name="TextureRect8" type="TextureRect" parent="Control/Textures" unique_id=1164285260]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 112.0
+offset_right = 51.0
+offset_bottom = 152.0
+texture = SubResource("AtlasTexture_kthu3")
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control" unique_id=1931556222]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 120
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="Button" type="Button" parent="Control/MarginContainer2" unique_id=730128129]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8601003, 0.9291029, 0.25267684, 1)
+theme_override_colors/font_hover_color = Color(0, 0.9490196, 1, 1)
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = SubResource("StyleBoxFlat_iw4x2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vop4n")
+theme_override_styles/hover = SubResource("StyleBoxFlat_njkqv")
+text = "Restart"
+
+[node name="Score" type="Label" parent="Control" unique_id=932405980]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 114.0
+offset_top = 45.0
+offset_right = 242.0
+offset_bottom = 68.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_l48yu")
+text = "Score: 0"
+
+[node name="HighScore" type="Label" parent="Control" unique_id=978151232]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 111.0
+offset_top = 68.0
+offset_right = 242.0
+offset_bottom = 91.0
+grow_vertical = 2
+text = "New HighScore !!"
+
+[connection signal="pressed" from="Control/MarginContainer2/Button" to="." method="_on_button_pressed"]

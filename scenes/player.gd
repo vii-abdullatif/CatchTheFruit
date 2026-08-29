@@ -1,22 +1,26 @@
+class_name Player
 extends CharacterBody2D
 
 const SPEED = 300.0
+@onready var main: Main = get_tree().current_scene as Main
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
 	move_and_slide()
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Fruits"):
 		area.queue_free()
-		Global.score += 1
+		main.score += 1
 	elif area.is_in_group("Bombs"):
 		print("got bombed")
 		area.queue_free()
-		Global.lives_count -= 1
+		Global.lives -= 1
