@@ -11,3 +11,9 @@ func _on_timer_timeout() -> void:
 func _on_bomb_timer_timeout() -> void:
 	var bombs = bombs_scene.instantiate()
 	$Bombs.add_child(bombs)
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Fruits"):
+		area.queue_free()
+		Global.score -= 1

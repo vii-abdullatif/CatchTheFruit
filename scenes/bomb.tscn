@@ -5,7 +5,7 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vpdcx"]
 
-[node name="Bomb" type="Area2D" unique_id=864970288]
+[node name="Bomb" type="Area2D" unique_id=864970288 groups=["Bombs"]]
 script = ExtResource("1_vpdcx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1620933222]

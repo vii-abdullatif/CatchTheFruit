@@ -15,6 +15,10 @@ run/main_scene="uid://cvc1mc54sn2im"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://assets/icon.svg"
 
+[autoload]
+
+Global="*uid://bjex6ovadr5bv"
+
 [display]
 
 window/size/viewport_width=360
@@ -40,6 +44,7 @@ folder_colors={
 
 Player=""
 Fruits=""
+Bombs=""
 
 [physics]
 

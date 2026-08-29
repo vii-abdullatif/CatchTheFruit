@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://15uc63mf78y3"]
+
+[ext_resource type="Texture2D" uid="uid://ysov1ctim23t" path="res://assets/life1.png" id="1_itngi"]
+[ext_resource type="Script" uid="uid://dyobor5bsve1g" path="res://scenes/UI/lives.gd" id="1_lbenx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbenx"]
+atlas = ExtResource("1_itngi")
+region = Rect2(0, 8, 24, 16)
+
+[node name="Lives" type="Node2D" unique_id=1776424092]
+script = ExtResource("1_lbenx")
+
+[node name="Life" type="Sprite2D" parent="." unique_id=1270800501]
+texture = SubResource("AtlasTexture_lbenx")
+
+[node name="Life2" type="Sprite2D" parent="." unique_id=1107574171]
+position = Vector2(20, 0)
+texture = SubResource("AtlasTexture_lbenx")
+
+[node name="Life3" type="Sprite2D" parent="." unique_id=357671711]
+position = Vector2(40, 0)
+texture = SubResource("AtlasTexture_lbenx")
